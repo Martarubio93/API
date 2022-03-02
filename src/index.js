@@ -11,7 +11,7 @@ const app = express();
 
 // server config
 app.use(cors(), express.json({limit: '10mb'}))
-const serverPort = process.env.PORT || 4000;
+const serverPort = process.env.PORT || 5000;
 app.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
@@ -21,6 +21,6 @@ app.use(express.static(staticServerPathWeb));
 
 //endpoint
 app.get('/cv', (req, res) => {
-    res.sendFile(__dirname + '/files/Frontend-MartRubio.CV');
+    res.sendFile(__dirname + '/files/Frontend-MartRubio.CV.pdf');
   });
   
