@@ -8,12 +8,10 @@ const cors = require("cors");
 // server creation
 const app = express();
 
-// server config
-app.use(cors());
-app.use(express.json());
 
-// we start at the port 4000
-const serverPort = 4000;
+// server config
+app.use(cors(), express.json({limit: '10mb'}))
+const serverPort = process.env.PORT || 4000;
 app.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
