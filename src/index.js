@@ -21,6 +21,6 @@ app.use(express.static(staticServerPathWeb));
 
 //endpoint
 app.get('/cv', (req, res) => {
-    res.sendFile(__dirname + '/files/Frontend-MartRubio.CV.pdf');
+    res.sendFile(__dirname + '/files/Marta-Rubio-Front-end.pdf');
   });
   
